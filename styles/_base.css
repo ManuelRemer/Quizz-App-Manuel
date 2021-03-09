@@ -8,6 +8,46 @@ body {
   line-height: 1.5;
   margin: 0;
 }
+/*grid-container*/
+.grid-layout {
+  display: grid;
+  grid-template-columns: 375px;
+  grid-template-rows: [header]1fr [main]1000px [footer]1fr;
+  width: 375px;
+  margin: 0 auto;
+}
+/*grid-items*/
+header {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  position: ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-header);
+  position: sticky;
+  top: 0;
+}
+main {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  background-color: var(--background-main);
+}
+footer {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  position: ;
+  background-color: var(--background-footer);
+  position: sticky;
+  bottom: 0;
+}
+footer nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+}
 
 h1,
 h2,
