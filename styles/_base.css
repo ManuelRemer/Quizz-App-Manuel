@@ -11,42 +11,50 @@ body {
 /*grid-container*/
 .grid-layout {
   display: grid;
-  grid-template-columns: 375px;
-  grid-template-rows: [header]1fr [main]1000px [footer]1fr;
-  width: 375px;
+  height: 100vh;
+  min-width: 320px;
+  max-width: 60vw;
+  grid-template-rows: [header]60px [main]auto [footer]60px;
   margin: 0 auto;
 }
 /*grid-items*/
 header {
-  grid-column: 1 / 2;
   grid-row: 1 / 2;
-  position: ;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--background-header);
-  position: sticky;
-  top: 0;
+  /*position: sticky;
+  top: 0;*/
 }
 main {
-  grid-column: 1 / 2;
   grid-row: 2 / 3;
   background-color: var(--background-main);
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+.cards-item {
+  margin: 5px 0;
+  width: 150px;
+  height: 80px;
+  background-color: var(--background-cards);
+}
+
 footer {
-  grid-column: 1 / 2;
   grid-row: 3 / 4;
-  position: ;
+
   background-color: var(--background-footer);
-  position: sticky;
-  bottom: 0;
+  /*position: sticky;
+  bottom: 0;*/
 }
 footer nav ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  list-style-type: none;
   padding: 0;
+  list-style-type: none;
 }
 
 h1,
