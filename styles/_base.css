@@ -17,7 +17,7 @@ body {
   display: grid;
   height: 100vh;
   min-width: 320px;
-  max-width: 60vw;
+  max-width: 1000px;
   grid-template-rows: [header]60px [main]auto [footer]60px;
   margin: 0 auto;
 }
@@ -38,12 +38,12 @@ main {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   gap: 10px;
 }
 .cards-item {
   width: 280px;
-  height: auto;
+  height: min-content;
   background-color: var(--background-cards);
   display: flex;
   flex-direction: column;
