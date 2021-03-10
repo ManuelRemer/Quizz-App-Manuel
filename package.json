@@ -7,7 +7,7 @@
     "test": "htmlhint && prettier --check . && npm run stylelint"
   },
   "keywords": [],
-  "author": "Jeremias Erbs <jerry@badabam.de> (https://badabam.de)",
+  "author": "Manuel Remer <manuelremer@web.de>",
   "license": "ISC",
   "main": "index.js",
   "repository": {
