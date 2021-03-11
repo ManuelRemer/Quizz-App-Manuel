@@ -1,0 +1,47 @@
+/*Block*/
+
+.question-card {
+  width: 280px;
+  height: min-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+  margin-top: 17px;
+  background-color: var(--background-cards);
+}
+/*Elements*/
+
+.question-card__headline {
+  margin: 7px 7px 0 7px;
+}
+
+.question-card__text {
+  margin: 7px 7px 0 7px;
+}
+.question-card__bookmark {
+  position: absolute;
+  font-size: 2em;
+  right: 20px;
+  top: -5px;
+  cursor: wait;
+}
+
+.question-card__button {
+  align-self: center;
+}
+.question-card__tags {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding-left: 0;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/*Modifier*/
+
+.quiz-card__bookmark--toggled {
+  color: green;
+  scale: 1.5;
+}

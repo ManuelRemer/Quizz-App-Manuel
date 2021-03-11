@@ -8,25 +8,28 @@
     ></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz App</title>
-    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
     <div class="grid-layout">
       <header><h1>Quizz App</h1></header>
       <main class="cards-cont">
-        <section class="cards-item">
-          <a><i class="fas fa-bookmark bookmark-card"></i></a>
-          <h2 class="card-headline">Question</h2>
-          <p class="question-txt">What do you they do if and what if not?</p>
-          <button>Show answer</button>
-          <ul class="flex-tag">
+        <!-- Block -->
+        <section class="question-card">
+          <a class="questioncard-card__bookmark"
+            ><i class="fas fa-bookmark"></i
+          ></a>
+          <h2 class="question-card__headline">Question</h2>
+          <p class="question-card__text">What happens do if and what if not?</p>
+          <button class="question-card__button">Show answer</button>
+          <ul class="question-card__tag">
             <li>Tag 1</li>
             <li>Tag 1</li>
             <li>Tag 1</li>
             <li>Tag 1</li>
           </ul>
         </section>
-        <section class="cards-item">
+        <!-- <section class="cards-item">
           <a><i class="fas fa-bookmark bookmark-card"></i></a>
           <h2 class="card-headline">Question</h2>
           <p class="question-txt">
@@ -34,7 +37,7 @@
             what if not?
           </p>
           <button>Show answer</button>
-          <ul class="flex-tag">
+          <ul class="question-card__tags">
             <li>Tag 1</li>
             <li>Tag 1</li>
             <li>Tag 1</li>
@@ -98,6 +101,7 @@
             <li>Tag 1</li>
           </ul>
         </section>
+        -->
       </main>
       <footer>
         <nav>
@@ -109,7 +113,7 @@
               <a href="bookmark.html"><i class="fas fa-bookmark"></i></a>
             </li>
             <li>
-              <a><i class="fas fa-align-left"></i></a>
+              <a href="form.html"><i class="fas fa-align-left"></i></a>
             </li>
             <li>
               <a href="profile.html"><i class="fas fa-user"></i></a>

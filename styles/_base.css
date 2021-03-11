@@ -35,6 +35,8 @@ header {
 main {
   grid-row: 2 / 3;
   background-color: var(--background-main);
+  display: flex;
+  justify-content: center;
 }
 .cards-cont {
   overflow-y: scroll;
@@ -75,10 +77,16 @@ main {
 button {
   align-self: center;
 }
-main {
+
+.flex-tag {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  list-style: none;
+  padding-left: 0;
+  align-items: center;
+  justify-content: space-evenly;
 }
+
 .profile-main {
   display: grid;
   height: auto;
@@ -112,14 +120,6 @@ img.photo-name img {
 }
 h2.photo-name h2 {
   width: 1fr;
-}
-.flex-tag {
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-  padding-left: 0;
-  align-items: center;
-  justify-content: space-evenly;
 }
 
 .about-txt {

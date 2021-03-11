@@ -1,0 +1,6 @@
+.create-form {
+  display: grid;
+  grid-template-rows: [question] 2fr [answer] 2fr [tags] 1fr [answer] 1fr;
+  justify-items: center;
+  align-items: center;
+}
