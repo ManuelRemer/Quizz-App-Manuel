@@ -67,6 +67,11 @@ main {
   top: -5px;
   cursor: wait;
 }
+.bookmark-card:hover {
+  color: green;
+  scale: 1.5;
+}
+
 button {
   align-self: center;
 }
@@ -90,8 +95,6 @@ main {
   grid-row: 1 / 2;
   padding: 20px 10px 0 10px;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   width: 300px;
