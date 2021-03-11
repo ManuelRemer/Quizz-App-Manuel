@@ -12,7 +12,7 @@ body {
   line-height: 1.5;
   margin: 0;
 }
-/*grid-container*/
+/*grid-layouts*/
 .grid-layout {
   display: grid;
   height: 100vh;
@@ -21,6 +21,7 @@ body {
   grid-template-rows: [header]60px [main]auto [footer]60px;
   margin: 0 auto;
 }
+
 /*grid-items*/
 header {
   grid-row: 1 / 2;
@@ -34,6 +35,8 @@ header {
 main {
   grid-row: 2 / 3;
   background-color: var(--background-main);
+}
+.cards-cont {
   overflow-y: scroll;
   display: flex;
   flex-direction: row;
@@ -64,6 +67,45 @@ main {
   top: -5px;
   cursor: wait;
 }
+button {
+  align-self: center;
+}
+
+.profile-main {
+  display: grid;
+  height: auto;
+  min-width: auto;
+  max-width: 1000px;
+  grid-template-rows: [photo_name] auto [about] auto [tags] auto [logout] auto;
+  margin: 10px 10px;
+  align-items: center;
+  justify-items: center;
+}
+
+.photo-name {
+  grid-row: 1 / 2;
+  padding: 20px 10px 0 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 300px;
+}
+.profile-image {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border: 5px solid black;
+  border-radius: 100%;
+}
+
+img.photo-name img {
+  width: 1fr;
+}
+h2.photo-name h2 {
+  width: 1fr;
+}
 .flex-tag {
   display: flex;
   flex-direction: row;
@@ -72,21 +114,56 @@ main {
   align-items: center;
   justify-content: space-evenly;
 }
-button {
+
+.about-txt {
+  grid-row: 2 / 3;
+  width: 300px;
+  padding: 0 10px;
+}
+.skills {
+  grid-row: 3 / 4;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+.skills h3 {
+  margin-bottom: 0;
+}
+.profile-tags {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  padding-left: 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+.profile-tags li {
+  margin-top: 0;
+  padding: 0 20px;
+  background-color: var(--background-skilltags);
+}
+
+.logout {
+  grid-row: 4 / 5;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.logout button {
+  margin: 20px;
   align-self: center;
 }
 
 footer {
   grid-row: 3 / 4;
-
   background-color: var(--background-footer);
-  /*position: sticky;
-  bottom: 0;*/
 }
 footer nav ul {
   display: flex;
   justify-content: space-around;
-
   padding: 0;
   list-style-type: none;
 }
