@@ -1,0 +1,28 @@
+label {
+  display: block;
+}
+input {
+  display: block;
+}
+
+.add-question {
+  grid-row: 1 / 2;
+  height: auto;
+}
+.add-answer {
+  grid-row: 2 / 3;
+}
+.add-tags {
+  grid-row: 3 / 4;
+}
+.submit {
+  grid-row: 4 / 5;
+}
+.submit-button {
+  width: 100px;
+  align-self: center;
+}
+.add-text {
+  line-height: 50px;
+  line-break: auto;
+}
