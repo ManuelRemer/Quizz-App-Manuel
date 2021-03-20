@@ -1,6 +1,6 @@
 /*Block*/
 
-.question-card {
+.question-card-not-influenced-by-dm {
   width: 280px;
   height: min-content;
   display: flex;
@@ -8,6 +8,8 @@
   justify-content: space-around;
   position: relative;
   margin-top: 17px;
+}
+.question-card {
   background-color: cornsilk;
 }
 /*Elements*/

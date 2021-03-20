@@ -2,6 +2,8 @@ const bookmarks = document.querySelectorAll('.bookmark-card')
 const buttons = document.querySelectorAll('button')
 const cards = document.querySelectorAll('.question-card')
 const header = document.querySelector('header')
+const footer = document.querySelector('footer')
+const main = document.querySelector('main')
 
 bookmarks.forEach(item => {
   item.addEventListener('click', () => {
@@ -63,7 +65,12 @@ addDarkmodeButton()
 
 let style = document.createElement('style')
 style.innerHTML =
-  '.card-darkmode {' + 'background-color: black;' + 'color: blue;' + '}'
+  '.card-darkmode {' +
+  'background-color: black;' +
+  'color: green;}' +
+  ' ' +
+  '.button-main-darkmode {' +
+  'background-color: #232529;}'
 console.log(style)
 let ref = document.querySelector('script')
 ref.parentNode.insertBefore(style, ref)
@@ -73,6 +80,9 @@ const dark = document.querySelector('.dark')
 dark.addEventListener('click', () => {
   cards.forEach(card => {
     card.classList.toggle('card-darkmode')
-    card.classList.toggle('.question-card')
+    card.classList.toggle('question-card')
+    header.classList.toggle('card-darkmode')
+    footer.classList.toggle('card-darkmode')
+    main.classList.toggle('button-main-darkmode')
   })
 })
