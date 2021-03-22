@@ -4,6 +4,7 @@ const cards = document.querySelectorAll('.question-card')
 const header = document.querySelector('header')
 const footer = document.querySelector('footer')
 const main = document.querySelector('main')
+const head = document.querySelector('head')
 
 bookmarks.forEach(item => {
   item.addEventListener('click', () => {
