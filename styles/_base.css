@@ -70,6 +70,7 @@ main {
   cursor: wait;
 }
 .bookmark-card:hover {
+  color: green;
   scale: 1.5;
 }
 
