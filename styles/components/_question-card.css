@@ -1,4 +1,7 @@
 /*Block*/
+.hidden {
+  display: none;
+}
 
 .question-card-not-influenced-by-dm {
   width: 280px;
@@ -8,6 +11,7 @@
   justify-content: space-around;
   position: relative;
   margin-top: 17px;
+  padding-top: 20px;
 }
 .question-card {
   background-color: cornsilk;
@@ -19,8 +23,14 @@
 }
 
 .question-card__text {
-  margin: 7px 7px 0 7px;
+  margin: 10px;
+  text-align: center;
 }
+.question-card__answer {
+  margin: 10px;
+  text-align: center;
+}
+
 .question-card__bookmark {
   position: absolute;
   font-size: 2em;
@@ -35,10 +45,19 @@
 .question-card__tags {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   list-style: none;
   padding-left: 0;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 5px;
+}
+.question-card li {
+  margin-top: 0;
+  padding: 2px 15px;
+  background-color: darkkhaki;
+  border-radius: 15px;
+  box-shadow: darkseagreen;
 }
 
 /*Modifier*/
