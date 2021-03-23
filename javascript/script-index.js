@@ -10,42 +10,6 @@ for (let i = 0; i < data.length; i++) {
   content.append(cardSection)
 }
 
-//bookmarks.forEach(item => {
-//  item.addEventListener('click', () => {
-//    if (item.style.color === 'red') {
-//      item.style.color = 'black'
-//    } else {
-//      item.style.color = 'red'
-//    }
-//  })
-//})
-
-//cards.forEach(card => {
-//  const button = card.querySelector('button')
-//  button.addEventListener('click', () => {
-//    const answer = document.createElement('div')
-//
-//    if (button.textContent === 'Show answer') {
-//      button.textContent = 'Hide answer'
-//      //event.preventDefault()
-//
-//      answer.style.height = 'minContent'
-//      answer.style.width = 'minContent'
-//      answer.style.padding = '10px'
-//      answer.style.marginBottom = '10px'
-//      answer.style.backgroundColor = 'lightBlue'
-//      answer.textContent = 'This is an answer'
-//      answer.style.alignSelf = 'center'
-//      card.append(answer)
-//    } else {
-//      const answer = card.querySelector('div')
-//      button.textContent = 'Show answer'
-//      answer.remove()
-//    }
-//  })
-//})
-
-// create Darkmode-ButtonDarkmode
 function addDarkmodeButton() {
   const dark = document.createElement('button')
   dark.classList.add('dark')
