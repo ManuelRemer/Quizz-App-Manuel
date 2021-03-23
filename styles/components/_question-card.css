@@ -3,7 +3,7 @@
   display: none;
 }
 
-.question-card-not-influenced-by-dm {
+.question-card {
   width: 280px;
   height: min-content;
   display: flex;
@@ -12,8 +12,7 @@
   position: relative;
   margin-top: 17px;
   padding-top: 20px;
-}
-.question-card {
+
   background-color: cornsilk;
 }
 /*Elements*/
