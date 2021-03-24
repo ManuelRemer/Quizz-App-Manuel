@@ -1,9 +1,12 @@
 import { createCard } from './lib/card.js'
-import { data } from './lib/db.js'
+import { getFieldset } from './lib/db.js'
 const header = document.querySelector('header')
 //const footer = document.querySelector('footer')
-const content = document.querySelector('.cards-cont')
+//const content = document.querySelector('.cards-cont')
 //const head = document.querySelector('head')
+const content = document.querySelector('.cards-cont')
+const data = getFieldset()
+console.log(data)
 
 for (let i = 0; i < data.length; i++) {
   const cardSection = createCard(data[i])
@@ -41,17 +44,16 @@ addDarkmodeButton()
 //  '.button-main-darkmode {' +
 //  'background-color: #232529;}'
 //
-//let ref = document.querySelector('script')
-//ref.parentNode.insertBefore(style, ref)
-//
-////Adds eventlistener to darkmote-button
-//const dark = document.querySelector('.dark')
-//dark.addEventListener('click', () => {
-//  cards.forEach(card => {
-//    card.classList.toggle('card-darkmode')
-//    card.classList.toggle('question-card')
-//    header.classList.toggle('card-darkmode')
-//    footer.classList.toggle('card-darkmode')
-//    main.classList.toggle('button-main-darkmode')
-//  })
-//})
+
+//Adds eventlistener to darkmote-button
+const cards = document.querySelectorAll('.question-card')
+const dark = document.querySelector('.dark')
+dark.addEventListener('click', () => {
+  cards.forEach(card => {
+    card.classList.toggle('card-darkmode')
+    card.classList.toggle('question-card')
+    header.classList.toggle('card-darkmode')
+    footer.classList.toggle('card-darkmode')
+    main.classList.toggle('button-main-darkmode')
+  })
+})
