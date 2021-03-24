@@ -1,14 +1,5 @@
-//import { data } from './db'
-
-/*{
-    id: 0,
-    question: 'What type of a language is HTML?',
-    answer: 'Markup Language',
-    isBookmarked: true,
-    tags: ['HTML', 'general'],
-  } */
-
 export function createCard(card) {
+  console.log(card)
   const cardSection = document.createElement('section')
   cardSection.classList.add(
     'question-card',
@@ -51,16 +42,17 @@ export function createCard(card) {
   cardUl.classList.add('question-card__tags')
   cardSection.append(cardUl)
 
-  // for (let i = 0; i < card.newTags.length; i++) {
-  //   let cardLi = document.createElement('li')
-  //   cardLi.textContent = card.newTags[i]
-  //   cardUl.append(cardLi)
-  // }
+  for (let i = 0; i < card.newTags.length; i++) {
+    let cardLi = document.createElement('li')
+    cardLi.textContent = card.newTags[i]
+    cardUl.append(cardLi)
+  }
+  // --> here is your extra challenge: remove comment// beside the forEach method and find out why it does not return similar as the loop above
 
-  // card.newTags.forEach(tag => {
-  //   let cardLi = document.createElement('li')
-  //   cardLi.textContent = card.newTags
-  //   cardUl.append(cardLi)
+  //card.newTags.forEach(tag => {
+  //  tag = document.createElement('li')
+  //  tag.textContent = card.newTags
+  //  cardUl.append(tag)
   //})
 
   return cardSection

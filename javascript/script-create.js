@@ -8,12 +8,13 @@ form.addEventListener('submit', event => {
 
   const inputTags = form['add-tags']
   const arrayTags = itemsStringToArray(inputTags.value)
+  console.log(itemsStringToArray(inputTags.value))
   //console.log(inputTags)
 
   pushFieldset({
-    newAQuestion: inputQuestion.value,
+    newQuestion: inputQuestion.value,
     newAnswer: inputAnswer.value,
-    newTags: arrayTags.value,
+    newTags: arrayTags,
   })
 
   //console.log(pushFieldset)
