@@ -1,18 +1,29 @@
-const form = document.querySelector('.form')
+import { pushFieldset } from './lib/db.js'
+
+const form = document.querySelector('form')
 form.addEventListener('submit', event => {
   event.preventDefault()
   const inputQuestion = form['add-question']
-
   const inputAnswer = form['add-answer']
+
   const inputTags = form['add-tags']
+  const arrayTags = itemsStringToArray(inputTags.value)
+  console.log(itemsStringToArray(inputTags.value))
+  //console.log(inputTags)
 
-  const newContent = {
-    newAnswer: inputQuestion.value,
-    newQuestion: inputAnswer.value,
-    newTags: inputTags.value,
-  }
+  pushFieldset({
+    newQuestion: inputQuestion.value,
+    newAnswer: inputAnswer.value,
+    newTags: arrayTags,
+  })
 
-  console.log(newContent)
+  //console.log(pushFieldset)
 
   form.reset()
+  alert('Section created!')
 })
+
+function itemsStringToArray(itemsString) {
+  const itemsArray = itemsString.split(',')
+  return itemsArray
+}

@@ -1,14 +1,5 @@
-//import { data } from './db'
-
-/*{
-    id: 0,
-    question: 'What type of a language is HTML?',
-    answer: 'Markup Language',
-    isBookmarked: true,
-    tags: ['HTML', 'general'],
-  } */
-
 export function createCard(card) {
+  console.log(card)
   const cardSection = document.createElement('section')
   cardSection.classList.add(
     'question-card',
@@ -26,15 +17,14 @@ export function createCard(card) {
   }
 
   const cardQuestion = document.createElement('p')
-  cardQuestion.textContent = card.question
+  cardQuestion.textContent = card.newQuestion
   cardQuestion.classList.add('question-card__text')
   cardSection.append(cardQuestion)
 
   const cardAnswer = document.createElement('p')
-  cardAnswer.textContent = card.answer
+  cardAnswer.textContent = card.newAnswer
   cardAnswer.classList.add('question-card__answer')
   cardAnswer.classList.add('hidden')
-  cardSection.append(cardAnswer)
 
   const cardButton = document.createElement('button')
   cardSection.append(cardButton)
@@ -52,27 +42,11 @@ export function createCard(card) {
   cardUl.classList.add('question-card__tags')
   cardSection.append(cardUl)
 
-  for (let i = 0; i < card.tags.length; i++) {
-    let cardLi = document.createElement('li')
-    cardLi.textContent = card.tags[i]
-    cardUl.append(cardLi)
-  }
+  card.newTags.forEach(tag => {
+    const tagElement = document.createElement('li')
+    tagElement.textContent = tag
+    cardUl.append(tagElement)
+  })
 
   return cardSection
 }
-
-/* <section class="question-card question-card-not-influenced-by-dm">
-          <a><i class="fas fa-bookmark bookmark-card"></i></a>
-          <h2 class="question-card__headline">Question1</h2>
-          <p class="question-card__text">
-            What do you they do if and what if not?
-          </p>
-          <button>Show answer</button>
-          <ul class="flex-tag">
-            <li>Tag 1</li>
-            <li>Tag 1</li>
-            <li>Tag 1</li>
-            <li>Tag 1</li>
-          </ul>
-        </section>
-         */
