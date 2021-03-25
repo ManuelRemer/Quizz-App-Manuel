@@ -49,11 +49,11 @@ export function createCard(card) {
   }
   // --> here is your extra challenge: remove comment// beside the forEach method and find out why it does not return similar as the loop above
 
-  //card.newTags.forEach(tag => {
-  //  tag = document.createElement('li')
-  //  tag.textContent = card.newTags
-  //  cardUl.append(tag)
-  //})
+  card.newTags.forEach(tag => {
+    const tagElement = document.createElement('li')
+    tagElement.textContent = tag
+    cardUl.append(tagElement)
+  })
 
   return cardSection
 }
