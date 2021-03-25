@@ -42,13 +42,6 @@ export function createCard(card) {
   cardUl.classList.add('question-card__tags')
   cardSection.append(cardUl)
 
-  for (let i = 0; i < card.newTags.length; i++) {
-    let cardLi = document.createElement('li')
-    cardLi.textContent = card.newTags[i]
-    cardUl.append(cardLi)
-  }
-  // --> here is your extra challenge: remove comment// beside the forEach method and find out why it does not return similar as the loop above
-
   card.newTags.forEach(tag => {
     const tagElement = document.createElement('li')
     tagElement.textContent = tag

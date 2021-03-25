@@ -1,5 +1,5 @@
 import { pushFieldset } from './lib/db.js'
-import { itemsStringToArray } from './lib/db.js'
+
 const form = document.querySelector('form')
 form.addEventListener('submit', event => {
   event.preventDefault()
@@ -22,3 +22,8 @@ form.addEventListener('submit', event => {
   form.reset()
   alert('Section created!')
 })
+
+function itemsStringToArray(itemsString) {
+  const itemsArray = itemsString.split(',')
+  return itemsArray
+}

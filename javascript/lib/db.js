@@ -1,27 +1,22 @@
-export function pushFieldset(fieldsetObjekt) {
-  let fieldsets
-  const storageFieldsets = JSON.parse(localStorage.getItem('fieldsets'))
-  if (storageFieldsets === null) {
-    fieldsets = []
+export function pushQuestionCard(QuestionCardObjekt) {
+  let QuestionCards
+  const storageQuestioncards = JSON.parse(localStorage.getItem('fieldsets'))
+  if (storageQuestioncards === null) {
+    QuestionCards = []
   } else {
-    fieldsets = storageFieldsets
+    QuestionCards = storageQuestionCard
   }
-  fieldsets.push(fieldsetObjekt)
-  localStorage.setItem('fieldsets', JSON.stringify(fieldsets))
+  QuestionCards.push(QuestionCardObjekt)
+  localStorage.setItem('fieldsets', JSON.stringify(QuestionCards))
 }
 
 export function getFieldset() {
-  let fieldsets
-  const storageFieldsets = JSON.parse(localStorage.getItem('fieldsets'))
-  if (storageFieldsets === null) {
-    fieldsets = []
+  let QuestionCards
+  const storageQuestioncards = JSON.parse(localStorage.getItem('fieldsets'))
+  if (storageQuestioncards === null) {
+    QuestionCards = []
   } else {
-    fieldsets = storageFieldsets
+    QuestionCards = storageQuestioncards
   }
-  return fieldsets
-}
-
-export function itemsStringToArray(itemsString) {
-  const itemsArray = itemsString.split(',')
-  return itemsArray
+  return QuestionCards
 }
